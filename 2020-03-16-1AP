@@ -1,0 +1,37 @@
+#tu będziemy pisać kodzik w Python
+# na początek musimy wczytać 3 zmienne
+#będą podane obok siebie - w Python to "lekki" problem
+
+#musimy wczytać jako tekst (wsyztsko w jednej zmiennej), nastepnie metodą split rozbić na 3 zmienne
+wejscie=input()
+# zmienna nie moze nazywac sie "in" -> zmieniamy na "wejscie"
+
+
+#Z treści zadania wynika, że otrzymaliśmy 3 liczby
+#są one teraz w zmiennnj in - razem ze spacjami
+#rozdzielimy je sobie teraz na 3 zmienne a,b,c metodą split
+a,b,c=wejscie.split()
+
+# i sprawdzimy czy się udało
+
+#print(c)
+#print(b)
+#print(a)
+
+#niby wszystko OK ... ale spwadzmy teraz dodawanie
+#print(a+b+c)
+
+#wynik dodawania nie jest prawidłowy - program dodał zmienne jako teksty
+#czyli musimy dokonać zamiany zmiennych tekstowych na zmienne typu int
+a=int(a)
+b=int(b)
+c=int(c)
+#print(a+b+c)
+
+#teraz mamy wartości liczbowe - możemy kontynuować zadanie
+# trójkąt powstanie jeżeli każda para boków jest dłuższa od trzeciego boku 
+#czyli mamy do sprawdzenie 3 warunki
+if a+b>c and a+c>b and b+c>a:
+  print ("TAK")
+else:    
+  print ("NIE")
