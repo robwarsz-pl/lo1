@@ -1,10 +1,9 @@
-#tu będziemy pisać kodzik w Python
+
 # na początek musimy wczytać 3 zmienne
 #będą podane obok siebie - w Python to "lekki" problem
 
 #musimy wczytać jako tekst (wsyztsko w jednej zmiennej), nastepnie metodą split rozbić na 3 zmienne
 wejscie=input()
-# zmienna nie moze nazywac sie "in" -> zmieniamy na "wejscie"
 
 
 #Z treści zadania wynika, że otrzymaliśmy 3 liczby
@@ -22,6 +21,7 @@ a,b,c=wejscie.split()
 #print(a+b+c)
 
 #wynik dodawania nie jest prawidłowy - program dodał zmienne jako teksty
+
 #czyli musimy dokonać zamiany zmiennych tekstowych na zmienne typu int
 a=int(a)
 b=int(b)
