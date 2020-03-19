@@ -69,7 +69,7 @@ void F2()
           cout<<S.top();
           S.pop();
        }
-       
+    S.pop();   
 }
 
 
