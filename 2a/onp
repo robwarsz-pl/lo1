@@ -46,33 +46,62 @@ int main()
                 {
                     F5;
                     break;
-                }    
+                }
             default:
                 break;
 
         }
     }
-    
-    
-    
+
+
+
 }
 
 void F1()
 {
    S.push('(');
 }
-
 void F2()
 {
     while(S.top()!='(')
-       {
-          cout<<S.top();
-          S.pop();
-       }
-    S.pop();   
+    {
+        cout<<S.top();
+        S.pop();
+    }
+    S.pop();
 }
 
+void F3(char z)
+{
+    while( !S.empty() )
+    {
 
+            if ( S.top()!='(' )
+                {
+                    //S.pop();
+                    break;
+                }
+    }
+    S.push(z);
+}
 
-
-
+void F4(char z)
+{
+    while( !S.empty() )
+    {
+        if (S.top()=='*' or S.top()=='/' )
+            {
+                cout<<S.top();
+                S.pop();
+            }
+        else
+        if (S.top() == '('   )
+                {
+                    //S.pop();
+                    break;
+                }
+        cout<<S.top();
+        S.pop();
+    }
+    S.push(z);
+}
