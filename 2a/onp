@@ -73,6 +73,7 @@ void F2()
 
 void F3(char z)
 {
+    cout<<' ';
     while( !S.empty() )
     {
 
@@ -87,6 +88,7 @@ void F3(char z)
 
 void F4(char z)
 {
+    cout<<' ';
     while( !S.empty() )
     {
         if (S.top()=='*' or S.top()=='/' )
