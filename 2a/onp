@@ -1,0 +1,68 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void F1();
+void F2();
+void F3(char);
+void F4(char);
+void F5();
+
+stack <char>S;
+
+int main()
+{
+    string w;
+    cin>>w;
+    int n=w.length();
+    for (int i=0;i<n;i++)
+    {
+        char z=w[i];
+        switch (z)
+        {
+            case '(':
+                F1();
+                break;
+            case ')':
+                F2();
+                break;
+            case '*':
+                F3(z);
+                break;
+            case '/':
+                F3(z);
+                break;
+            case '+':
+                F4(z);
+                break;
+            case '-':
+                {
+                    F4(z);
+                    break;
+                }
+            case '0' ... '9':
+                cout<<z;
+                break;
+            case '=':
+                {
+                    F5;
+                    break;
+                }    
+            default:
+                break;
+
+        }
+    }
+    
+    
+    
+}
+
+void F1()
+{
+   S.push('(');
+}
+
+void F2()
+{
+
+}
