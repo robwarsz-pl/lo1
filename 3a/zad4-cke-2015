@@ -22,8 +22,8 @@ int main()
     */
 
     zad1();
-
     zad2();
+    zad3();
 }
 
 void zad1()
@@ -54,7 +54,7 @@ void zad2()
 {
     int q;
     int p2=0, p8=0;
-    for(int i=0; i<1000; i++)
+    for(int i=0; i<n; i++)
     {
         q=T[i].length();
         if (T[i][q-1]=='0')
@@ -65,5 +65,46 @@ void zad2()
     cout<<"\n\nzad 2\nwyniki:"<<"\nPodzielnych przez 2=>"<<p2<<"\nPodzielnych przez 8=>"<<p8;
     ofstream zapisz ("wynik4.txt",fstream::app);
     zapisz<<"\n\nZad 2\nwyniki:"<<"\nPodzielnych przez 2=>"<<p2<<"\nPodzielnych przez 8=>"<<p8;
+    zapisz.close();
+}
+
+void zad3()
+{
+    string minw="";
+    string maxw="0";
+    for (int i=0 ; i<260 ; i++)
+        minw=minw+'1';
+    //cout<<minw;
+    int gdziemin,gdziemax;
+    for (int i=0 ; i<n ; i++)
+    {
+        if (T[i].length()>maxw.length())
+        {
+            maxw=T[i];
+            gdziemax=i;
+        }
+        else
+            if (T[i].length()==maxw.length() && T[i]>maxw)
+                {
+                    maxw=T[i];
+                    gdziemax=i;
+                }
+
+        if (T[i].length()<minw.length())
+           {
+                minw=T[i];
+                gdziemin=i;
+            }
+            else if (T[i].length()==minw.length() && T[i]<minw)
+                {
+                    minw=T[i];
+                    gdziemin=i;
+                }
+    }
+    cout<<"\n"<<gdziemin+1;
+    cout<<"\n"<<gdziemax+1;
+
+    ofstream zapisz ("wynik4.txt",fstream::app);
+    zapisz<<"\n\nZad 3\nwyniki:"<<"\nnajmniejsza =>"<<gdziemin+1<<"\nNajwieszka =>"<<gdziemax+1;
     zapisz.close();
 }
