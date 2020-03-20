@@ -1,1 +1,49 @@
-startujemy
+#include<bits/stdc++.h>
+using namespace std;
+
+void zad1();
+void zad2();
+void zad3();
+
+string T[1002];
+int n=1000;
+
+int main()
+{
+    ifstream czytaj ("liczby.txt");
+    for (int i=0;i<n;i++)
+          czytaj>>T[i];
+    czytaj.close();
+
+    /* sprawdzenie poprawnosci wczytywania danych
+
+    for (int i=0;i<n;i++)
+        cout<<T[i]<<endl;
+    */
+
+    zad1();
+}
+
+void zad1()
+{
+    int jedi=0,z=0,wynik=0;
+    for(int i=0; i<1000; i++)
+    {
+        for(int j=0; j<T[i].length(); j++)
+        {
+            if(T[i][j]=='1')
+                jedi++;
+            else
+                z++;
+        }
+        if(z>jedi)
+            wynik++;
+        z=0;
+        jedi=0;
+    }
+    cout<<"zad 1\nwynik="<<wynik;
+    ofstream zapisz ("wynik4.txt");
+    zapisz<<"Zad 1\nwynik="<<wynik;
+    zapisz.close();
+
+}
