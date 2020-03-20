@@ -1,3 +1,5 @@
+//pamietaj o pliku z danymi - liczby txt -> https://github.com/robwarsz-pl/lo1/edit/master/3a/liczby.txt
+
 #include<bits/stdc++.h>
 using namespace std;
 
