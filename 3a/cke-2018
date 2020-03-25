@@ -39,18 +39,32 @@ void zad2()
 	set <char> S;
 	string wynik="";
 	int wynikL=0;
-	
+	int n;
 	for (int i=0 ; i<1000 ; i++)
 		{
-					
+			n=T[i].length();
+			for (int j=0 ; j<n ; j++)
+				S.insert(T[i][j]);
+			if ( S.size() > wynikL )	
+				{
+					wynik=T[i];
+					wynikL=S.size();					
+				}
+			S.clear();	
 		}
 	
+	cout << "\nODP2\n" << wynik << " " << wynikL ;	
+	ofstream out ("wynik4.txt",fstream::app);
+	out << "\nODP2\n" << wynik << " " << wynikL ;	
+	out.close();	
+	
 	/* sprawdzenie set*/
+	/*
 	S.insert('a');
 	S.insert('a');
 	S.insert('b');
 	cout<< "\nSET SIZE=" << S.size();
 	S.clear();
 	cout<< "\nSET SIZE=" << S.size();
-	
+	*/
 }
