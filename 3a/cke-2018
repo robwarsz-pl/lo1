@@ -4,9 +4,11 @@ using namespace std;
 string T[1002];
 void zad1();
 void zad2();
+void zad3();
 
 int main()
 {
+	//ifstream odczyt ("przyklad.txt");
 	ifstream odczyt ("sygnaly.txt");
 	for (int i=0 ; i < 1000 ; i++)
 		odczyt>>T[i];
@@ -17,6 +19,7 @@ int main()
 	*/
 	zad1();
 	zad2();
+	zad3();
 }
 
 void zad1()
@@ -67,4 +70,23 @@ void zad2()
 	S.clear();
 	cout<< "\nSET SIZE=" << S.size();
 	*/
+}
+
+
+
+void zad3()
+{
+	bool prawidlowa=true;
+	ofstream out ("wynik4.txt",fstream::app);
+	out<<"\nOdp3\n";
+	for (int i=0 ; i<1000 ; i++)
+	{
+		for (int j=0 ; j<T[i].length()-1; j++)
+			if ( abs( T[i][j]-T[i][j+1])>10 )
+				prawidlowa=false;
+		if (prawidlowa)
+			out<<T[i]<<endl;
+		prawidlowa=true;	
+	}
+	
 }
