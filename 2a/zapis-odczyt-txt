@@ -1,0 +1,47 @@
+#include<bits/stdc++.h> 
+using namespace std;    
+int main() 
+{     
+  //zapis do pliku             
+  srand(time(NULL));     
+  int a,b,c;     
+  a=rand();     
+  b=rand();     
+  c=rand();     
+
+  cout<<a<<endl;     
+  cout<<b<<endl;     
+  cout<<c<<endl;         
+  
+  ofstream zapis1 ("wyniki.txt");     
+  zapis1 << a << endl;     
+  zapis1.close();         
+  
+  ofstream zapis2 ("wyniki.txt",fstream::app);     
+  zapis2 << b << endl;     
+  zapis2.close();         
+
+  ofstream zapis3 ("wyniki.txt",fstream::app);     
+  zapis3 << c << endl;     
+  zapis3.close();     
+ 
+  //odczyt z pliku     
+  int x,y,z;     
+
+  ifstream odczyt ("wyniki.txt");     
+  odczyt>>x;     
+  odczyt>>y;     
+  odczyt>>z;         
+  cout<< "\nzawartosc pliku: " << x << ", "<< y << ", " << z;    odczyt.close();     
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
